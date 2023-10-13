@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .details {
+      width: 100%;
+      padding: 20px;
+      border: 5px solid #ccc;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .photo {
+      width: 45%;
+    }
+
+    #timer {
+      padding: 60px;
+      background-color: #9ed53f;
+      border: 1px solid #9e2e2e;
+      border-radius: 10px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      font-size: 24px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 150px;
+    }
+
+    .styled-hr {
+      border: none;
+      height: 1px;
+      background-color: #333;
+      margin: 20px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="details">
+    <div class="photo">
+		  <div class="container mt-2">
+    <form action="back" method="post">
+      <button type="submit" class="btn btn-primary">Back</button>
+    </form>
+  </div>
+  <br>
+
+      <img src="https://i.postimg.cc/xTwbPJBH/In-Shot-20200703-201644778.jpg" alt="Beautiful Sunset"
+        style="height: 300px;">
+      <div class="time" id="timer">
+      </div>
+      <div class="styled-hr"></div>
+    </div>
+    <h2>Discription</h2>
+    <p><strong>Owner Name:</strong> Garima Verma</p>
+    <p><strong>Product Name:</strong> Doodle Art</p>
+    <p><strong>Medium:</strong> watercolor, paper</p>
+    <p><strong>Hand Painted:</strong> Original painting from our collection</p>
+    <p><strong>Condition:</strong> we tried to convey the maximum information with the help of photos about this product
+    </p>
+    <p><strong>Detail:</strong> <br> Immerse yourself in a mesmerizing world of imagination with this one-of-a-kind
+      "Whimsical Dreamscape Doodle Art." This intricate and captivating artwork is a testament to the limitless
+      boundaries of creativity and showcases a symphony of doodles that dance together in perfect harmony.</p>
+
+    <p>The piece spans a generous canvas, measuring [dimensions], allowing the viewer to explore every nook and cranny
+      of its enchanting details. The artist's hand has sketched an ethereal dreamscape, where surreal landscapes
+      intertwine with fanciful creatures, creating a sense of wonder and awe.</p>
+
+
+    <p>The intricate details of the doodles invite the observer to get lost in a journey of discovery. Each stroke tells
+      a unique story, from hidden creatures peeking out from behind foliage to delicate patterns that seem to take on a
+      life of their own. The artist's use of line and form creates a captivating sense of movement, as if the entire
+      scene were alive and pulsating.</p>
+
+
+    <p>The color palette is a delightful array of vibrant hues and subtle tones, expertly blended to evoke different
+      emotions as you traverse the artwork. From soothing blues that convey tranquility to energetic bursts of reds and
+      yellows that infuse the scene with excitement, every shade contributes to the overall narrative.</p>
+
+
+    <p>This "Whimsical Dreamscape Doodle Art" is more than just a visual experience; it's an invitation to escape into a
+      world where imagination knows no bounds. Whether displayed in a cozy corner of your home or a creative workspace,
+      this artwork will undoubtedly spark conversations and inspire those who gaze upon it.</p>
+
+    <p>Place your bid now to own a piece of artistic enchantment that celebrates the power of doodles to transcend the
+      ordinary and transport us to extraordinary realms. Don't miss the opportunity to make this captivating dreamscape
+      a part of your art collection.</p>
+      <div class="photo">
+		  <div class="container mt-2">
+    <form action="biding">
+      <button type="submit" class="btn btn-primary">Register for Bidding</button>
+    </form>
+  </div>
+  </div>
+  <script>
+    // Set the countdown time (in seconds)
+    const countdownTime = 120; // 2 minutes
+
+    function updateTimer() {
+      const timerElement = document.getElementById("timer");
+      const currentTime = new Date().getTime();
+      const endTime = currentTime + countdownTime * 1000;
+
+      const intervalId = setInterval(function () {
+        const now = new Date().getTime();
+        const timeLeft = endTime - now;
+
+        if (timeLeft <= 0) {
+          clearInterval(intervalId);
+          timerElement.innerHTML = "Bidding Start !";
+        } else {
+          const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+          timerElement.innerHTML = `Remaining Time: ${minutes}m ${seconds}s`;
+        }
+      }, 1000);
+    }
+
+    updateTimer();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auction Bidding Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .auction-form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .form-button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="auction-form">
+        <h2>Auction Bidding Form</h2>
+        <form action="bid" method="post">
+            <div class="form-group">
+                <label for="price" class="form-label">Your Bid Amount:</label>
+                <input type="text" id="price" name="price" class="form-input" required>
+            </div>
+             <div class="form-group">
+                <label for="item" class="form-label">Your Bid item name:</label>
+                <input type="text" id="item" name="item" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-label">Your Email:</label>
+                <input type="email" id="email" name="email" class="form-input" required>
+            </div>
+            <button type="submit" class="form-button">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
