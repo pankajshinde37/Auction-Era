@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            background-image: url('https://assets-global.website-files.com/614716f50b4f49202fdd0087/616949393cf90643c1403605_6423.png');
+            background-size: cover;
+        }
+
+        .login-container {
+            background-color: #ff7043 deep-orange lighten-1;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            font-size: 30px;
+            color:black;
+        }
+
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-container label {
+            margin-bottom: 10px;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            
+        }
+
+        .login-container input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Admin Login</h2>
+        <form action="Acheck" method="POST">
+            <label for="userName"> <strong>Username:</strong></label>
+            <input type="text" id="userName" name="userName" required>
+            <label for="password"> <strong>Password:</strong></label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>

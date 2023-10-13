@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+	  
+	  
+    body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .details {
+      width: 100%;
+      padding: 20px;
+      border: 5px solid #ccc;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .photo {
+      width: 45%;
+    }
+
+    #timer {
+    padding: 60px; 
+    background-color: #9ed53f;
+    border: 1px solid #9e2e2e; 
+    border-radius: 10px; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 150px;
+    }
+
+    .styled-hr {
+      border: none;
+      height: 1px;
+      background-color: #333;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="details">
+    <div class="photo">
+		 <div class="container mt-2">
+    <form action="back" method="post">
+      <button type="submit" class="btn btn-primary">Back</button>
+    </form>
+  </div>
+  <br>
+      <img src="https://i.postimg.cc/RV5H7Jkt/In-Shot-20200827-225529093.jpg" alt="Beautiful Sunset" style="height: 300px;">
+      <div class="time" id="timer">
+      </div>
+      <div class="styled-hr"></div>
+    </div>
+    <h2>Discription</h2>
+    <p><strong>Owner Name:</strong> Garima Verma</p>
+    <p><strong>Product Name:</strong> Mandhla Art</p>
+    <p><strong>Medium:</strong> Pen and Ink, Colored Pencils</p>
+    <p><strong>Hand Painted:</strong> Original painting from our collection</p>
+    <p><strong>Condition:</strong> we tried to convey the maximum information with the help of photos about this product
+    </p>
+    <p><strong>Detail:</strong> <br> Immerse yourself in the mesmerizing world of mandala art with this captivating masterpiece titled "Vibrant Mandala." This exquisite artwork is a celebration of intricate patterns, vivid colors, and harmonious design that has been meticulously handcrafted to create a visual symphony that resonates with the soul.</p>
+  
+    <p>The mandala, a sacred symbol of unity and balance, comes to life in a burst of vibrant hues and exquisite details. Every stroke and curve has been thoughtfully placed, resulting in a mesmerizing composition that draws you in and invites you to explore the depths of its complexity.</p>
+  
+   
+    <p>Spanning a generous canvas, this "Vibrant Mandala" takes you on a journey through layers of intricate patterns that seem to ripple like waves of energy. The play of colors dances across the canvas, evoking emotions that range from tranquility to excitement. Each section of the mandala tells its own story, while collectively they harmonize into a symphony of beauty.</p>
+    
+   
+    <p>This artwork transcends mere visuals; it's an invitation to connect with the universe, to meditate upon the patterns of existence, and to appreciate the balance between intricacy and simplicity. Display this mandala in your living space or creative sanctuary, and let its vibrant energy infuse your surroundings with positivity and inspiration.</p>
+  
+   
+    <p>Place your bid now to own a piece of art that embodies the spirit of mandala symbolism and showcases the artist's dedication to precision and creativity. Don't miss the opportunity to make this "Vibrant Mandala" a treasured addition to your art collection, reminding you of the unity and beauty that reside within the realm of art.</p>
+ <div class="photo">
+		  <div class="container mt-2">
+    <form action="biding">
+      <button type="submit" class="btn btn-primary">Register for Bidding</button>
+    </form>
+  </div>
+ 
+ 
+  </div>
+  <script>
+    // Set the countdown time (in seconds)
+    const countdownTime = 120; // 2 minutes
+
+    function updateTimer() {
+      const timerElement = document.getElementById("timer");
+      const currentTime = new Date().getTime();
+      const endTime = currentTime + countdownTime * 1000;
+
+      const intervalId = setInterval(function () {
+        const now = new Date().getTime();
+        const timeLeft = endTime - now;
+
+        if (timeLeft <= 0) {
+          clearInterval(intervalId);
+          timerElement.innerHTML = "Bidding Start !";
+        } else {
+          const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+          timerElement.innerHTML = `Remaining Time: ${minutes}m ${seconds}s`;
+        }
+      }, 1000);
+    }
+
+    updateTimer();
+  </script>
+</body>
+
+</html>

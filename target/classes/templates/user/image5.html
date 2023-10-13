@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .details {
+      width: 100%;
+      padding: 20px;
+      border: 5px solid #ccc;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .photo {
+      width: 45%;
+    }
+
+    #timer {
+    padding: 60px; 
+    background-color: #9ed53f;
+    border: 1px solid #9e2e2e; 
+    border-radius: 10px; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 150px;
+    }
+
+    .styled-hr {
+      border: none;
+      height: 1px;
+      background-color: #333;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="details">
+    <div class="photo">
+		 <div class="container mt-2">
+    <form action="back" method="post">
+      <button type="submit" class="btn btn-primary">Back</button>
+    </form>
+  </div>
+  <br>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfqXxYTXT6XH3v3ZkNC7a3ZAeG6QOjGncRmQ&usqp=CAU" alt="Beautiful Sunset" style="height: 300px;">
+      <div class="time" id="timer">
+      </div>
+      <div class="styled-hr"></div>
+    </div>
+    <h2>Discription</h2>
+    <p><strong>Owner Name:</strong> Tarak Mehta</p>
+    <p><strong>Product Name:</strong> Guitar - 1912</p>
+    <p> Original Instrument from our collection</p>
+    <p><strong>Condition:</strong> we tried to convey the maximum information with the help of photos about this product
+    </p>
+    <p><strong>Detail:</strong> <br> Step into a timeless world of melodies with this exquisite vintage guitar, a relic that carries with it the echoes of bygone eras and the soulful tunes that once emanated from its strings. This remarkable instrument is not just a guitar; it's a piece of history that's waiting to be rekindled in the hands of a passionate musician.</p>
+  
+    <p>Crafted with precision and artistry, this vintage guitar boasts the distinctive marks of a bygone era. The weathered finish and delicate patina tell stories of countless chords strummed, melodies composed, and stages graced. Its imperfections are a testament to the countless hours of music it has produced, each note resonating with the spirit of musicians past.</p>
+  
+   
+    <p>The sound that emanates from this vintage guitar is nothing short of magical. With each pluck of a string, the guitar reverberates with a warmth and depth that can only be achieved through years of play and experience. The aged wood has developed a character that infuses every note with soul, taking you on a musical journey that spans generations.</p>
+    
+   
+    <p>As you hold this vintage guitar in your hands, you become a custodian of its history. It's an opportunity to continue the legacy of creativity and expression that has been woven into its fibers over the years. Whether you're an experienced musician or a budding enthusiast, this guitar holds the promise of melodies waiting to be discovered and shared.</p>
+  
+   
+    <p>Owning this vintage guitar isn't just about having a musical instrument; it's about owning a piece of heritage, a tangible link to the artists who have shaped the world of music. The guitar is a canvas for your musical aspirations, a bridge that connects you to the past while inspiring you to create new harmonies.</p>
+
+    <p>Now is your chance to own a vintage guitar that embodies the nostalgia of yesterday and the promise of tomorrow. Bid now to seize the opportunity to make this instrument a cherished part of your musical journey. Let the chords you play on this guitar add new layers to its history, and let the melodies you create resonate with the stories of musicians who came before you.</p>
+
+    <p>Don't let this musical treasure slip away. Place your bid, and let the strings of this vintage guitar carry you on a symphony of time and melody, creating harmonies that transcend the ages.</p>
+  <div class="photo">
+		  <div class="container mt-2">
+    <form action="biding">
+      <button type="submit" class="btn btn-primary">Register for Bidding</button>
+    </form>
+  </div>
+  
+  </div>
+  <script>
+    // Set the countdown time (in seconds)
+    const countdownTime = 120; // 2 minutes
+
+    function updateTimer() {
+      const timerElement = document.getElementById("timer");
+      const currentTime = new Date().getTime();
+      const endTime = currentTime + countdownTime * 1000;
+
+      const intervalId = setInterval(function () {
+        const now = new Date().getTime();
+        const timeLeft = endTime - now;
+
+        if (timeLeft <= 0) {
+          clearInterval(intervalId);
+          timerElement.innerHTML = "Bidding Start !";
+        } else {
+          const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+          timerElement.innerHTML = `Remaining Time: ${minutes}m ${seconds}s`;
+        }
+      }, 1000);
+    }
+
+    updateTimer();
+  </script>
+</body>
+
+</html>

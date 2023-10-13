@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .details {
+      width: 100%;
+      padding: 20px;
+      border: 5px solid #ccc;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .photo {
+      width: 45%;
+    }
+
+    #timer {
+    padding: 60px; 
+    background-color: #9ed53f;
+    border: 1px solid #9e2e2e; 
+    border-radius: 10px; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 150px;
+    }
+
+    .styled-hr {
+      border: none;
+      height: 1px;
+      background-color: #333;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="details">
+    <div class="photo">
+		 <div class="container mt-2">
+    <form action="back" method="post">
+      <button type="submit" class="btn btn-primary">Back</button>
+    </form>
+  </div>
+  <br>
+      <img src="https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcQ-FvbbAq5IaJUhtwxXEwY0D-jiZju02ejnNHx_bQWL_27GF3srhwJgqusMAqKh3QqU" alt="Beautiful Sunset" style="height: 300px;">
+      <div class="time" id="timer">
+      </div>
+      <div class="styled-hr"></div>
+    </div>
+    <h2>Discription</h2>
+    <p><strong>Owner Name:</strong> Samarjeet Desai</p>
+    <p><strong>Product Name:</strong> The Mona Lisa - 1503</p>
+    <p> Original Painting from our collection</p>
+    <p><strong>Condition:</strong> we tried to convey the maximum information with the help of photos about this product
+    </p>
+    <p><strong>Detail:</strong> <br> Step into the timeless realm of art and culture with the unparalleled masterpiece, the "Mona Lisa." Created by the genius Leonardo da Vinci, this iconic painting is a testament to artistic mastery, a symbol of intrigue, and a portrait that continues to captivate hearts and minds across centuries..</p>
+  
+    <p>The "Mona Lisa" stands as a beacon of Renaissance artistry, portraying an enigmatic woman who gazes upon the world with a subtle smile that defies interpretation. Da Vinci's meticulous attention to detail is evident in every brushstroke, from the delicate play of light on her skin to the intricate folds of her garments. The painting's seamless blend of realism and ethereal beauty sets it apart as a true masterpiece.</p>
+  
+   
+    <p>As you study the "Mona Lisa," you're drawn into a world where history and imagination intertwine. The subject's gaze seems to follow you, inviting you to ponder the secrets behind her smile. The landscape behind her evokes a sense of serenity, inviting you to explore the world she inhabits. Da Vinci's use of sfumato, a technique that creates soft transitions between colors and tones, adds an air of mystique to the painting.</p>
+    
+   
+    <p>Beyond its technical brilliance, the "Mona Lisa" carries a legacy that spans the realms of art, history, and pop culture. It has inspired countless artists, writers, and thinkers, becoming an emblem of cultural significance that transcends boundaries.</p>
+  
+   
+    <p>Owning a piece of art history like the "Mona Lisa" isn't just about possessing a painting; it's about immersing yourself in a narrative that bridges the gap between past and present. Whether you're a seasoned art enthusiast or someone discovering the art world's allure for the first time, the "Mona Lisa" invites you to contemplate the beauty that lies in both the seen and the unseen.</p>
+
+    <p>Bid now to claim your stake in art's legacy, to welcome the "Mona Lisa" into your life as a symbol of culture, elegance, and the human spirit's quest for beauty. Let her enigmatic smile grace your surroundings, reminding you of the power of art to transcend time and touch the depths of human emotion.</p>
+
+    <p>Don't miss this extraordinary opportunity to own a piece of art that has left an indelible mark on the canvas of history. Place your bid and invite the "Mona Lisa" to become a cherished part of your world, a treasure that speaks to the enduring magic of artistic creation.</p>
+ <div class="photo">
+		  <div class="container mt-2">
+    <form action="biding">
+      <button type="submit" class="btn btn-primary">Register for Bidding</button>
+    </form>
+  </div>
+ 
+  </div>
+  <script>
+    // Set the countdown time (in seconds)
+    const countdownTime = 120; // 2 minutes
+
+    function updateTimer() {
+      const timerElement = document.getElementById("timer");
+      const currentTime = new Date().getTime();
+      const endTime = currentTime + countdownTime * 1000;
+
+      const intervalId = setInterval(function () {
+        const now = new Date().getTime();
+        const timeLeft = endTime - now;
+
+        if (timeLeft <= 0) {
+          clearInterval(intervalId);
+          timerElement.innerHTML = "Bidding Start !";
+        } else {
+          const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+          timerElement.innerHTML = `Remaining Time: ${minutes}m ${seconds}s`;
+        }
+      }, 1000);
+    }
+
+    updateTimer();
+  </script>
+</body>
+
+</html>

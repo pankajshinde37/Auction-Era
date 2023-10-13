@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+ 
+  <style>
+    body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .details {
+      width: 100%;
+      padding: 20px;
+      border: 5px solid #ccc;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .photo {
+      width: 45%;
+    }
+
+    #timer {
+    padding: 60px; 
+    background-color: #9ed53f;
+    border: 1px solid #9e2e2e; 
+    border-radius: 10px; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 150px;
+    }
+
+    .styled-hr {
+      border: none;
+      height: 1px;
+      background-color: #333;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="details">
+    <div class="photo">
+		 <div class="container mt-2">
+    <form action="back" method="post">
+      <button type="submit" class="btn btn-primary">Back</button>
+    </form>
+  </div>
+  <br>
+      <img src="https://i.postimg.cc/ZRN9WsBv/download.jpg" alt="Beautiful Sunset" style="height: 300px;">
+      <div class="time" id="timer">
+      </div>
+      <div class="styled-hr"></div>
+    </div>
+    <h2>Discription</h2>
+    <p><strong>Owner Name:</strong> Himanshu Bokde</p>
+    <p><strong>Product Name:</strong> Neil Armstrong Space Suit - 1969</p>
+    <p><strong>Condition:</strong> we tried to convey the maximum information with the help of photos about this product
+    </p>
+    <p><strong>Detail:</strong> <br> Presented for auction is an unparalleled piece of human history: Neil Armstrong's iconic Apollo 11 space suit, worn during his historic lunar landing on July 20, 1969. This remarkable artifact marks one of the most pivotal moments in the annals of space exploration, forever immortalizing the first steps taken by a human on the surface of the moon.</p>
+  
+    <p>The meticulously preserved space suit is a testament to human ingenuity, engineering, and courage. Crafted by the skilled artisans at NASA, this A7L pressure suit served as a protective cocoon for Neil Armstrong during the pivotal moments of the Apollo 11 mission. Comprising multiple layers of cutting-edge materials, this suit shielded its wearer from the harsh vacuum of space and the extreme temperature fluctuations of the lunar surface.</p>
+  
+   
+    <p>This suit has a provenance that can be traced back to its use during the historic Apollo 11 mission. It has been carefully preserved in a controlled environment, ensuring its structural integrity and historical significance.</p>
+    
+   
+    <p>Neil Armstrong's Apollo 11 space suit represents an unparalleled opportunity to own a tangible piece of human achievement, a testament to mankind's indomitable spirit of exploration. This artifact, with its universal significance, transcends generations, making it an extraordinary addition to any esteemed collection of historical and scientific memorabilia.</p>
+  
+   
+    <p>Bidders are urged to carefully review all documentation and conduct due diligence prior to bidding on this unique and priceless artifact. The winning bidder will not only acquire an extraordinary piece of history but also contribute to the preservation of the legacy of space exploration for future generations.</p>
+<div class="photo">
+		  <div class="container mt-2">
+    <form action="biding">
+      <button type="submit" class="btn btn-primary">Register for Bidding</button>
+    </form>
+  </div>
+
+  </div>
+  <script>
+    // Set the countdown time (in seconds)
+    const countdownTime = 120; // 2 minutes
+
+    function updateTimer() {
+      const timerElement = document.getElementById("timer");
+      const currentTime = new Date().getTime();
+      const endTime = currentTime + countdownTime * 1000;
+
+      const intervalId = setInterval(function () {
+        const now = new Date().getTime();
+        const timeLeft = endTime - now;
+
+        if (timeLeft <= 0) {
+          clearInterval(intervalId);
+          timerElement.innerHTML = "Bidding Start !";
+        } else {
+          const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+          timerElement.innerHTML = `Remaining Time: ${minutes}m ${seconds}s`;
+        }
+      }, 1000);
+    }
+
+    updateTimer();
+  </script>
+</body>
+
+</html>

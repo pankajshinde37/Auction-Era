@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .details {
+      width: 100%;
+      padding: 20px;
+      border: 5px solid #ccc;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .photo {
+      width: 45%;
+    }
+
+    #timer {
+    padding: 60px; 
+    background-color: #9ed53f;
+    border: 1px solid #9e2e2e; 
+    border-radius: 10px; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 150px;
+    }
+
+    .styled-hr {
+      border: none;
+      height: 1px;
+      background-color: #333;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="details">
+    <div class="photo">
+		 <div class="container mt-2">
+    <form action="back" method="post">
+      <button type="submit" class="btn btn-primary">Back</button>
+    </form>
+  </div>
+  <br>
+      <img src="https://i.postimg.cc/qvKGdwQq/daguerreotype2.jpg" alt="Beautiful Sunset" style="height: 300px;">
+      <div class="time" id="timer">
+      </div>
+      <div class="styled-hr"></div>
+    </div>
+    <h2>Discription</h2>
+    <p><strong>Owner Name:</strong> Gaurav Ahire</p>
+    <p><strong>Product Name:</strong> World oldest Camera - 1778</p>
+    <p><strong>Condition:</strong> we tried to convey the maximum information with the help of photos about this product
+    </p>
+    <p><strong>Detail:</strong> <br> Step into the annals of photography history and behold the remarkable opportunity to own a piece of time itself – the world's oldest camera. This iconic relic is a testament to human ingenuity, capturing the essence of a bygone era when the art of capturing light and image was in its nascent stages.</p>
+  
+    <p>Crafted with meticulous craftsmanship, this historic camera is a tangible link to the past, offering a glimpse into the pioneering days of photography. Every curve and detail tells a story of innovation and creativity, as photographers of yesteryears embarked on a journey to capture the world through a lens.</p>
+  
+   
+    <p>The lens, a piece of artistry in itself, once focused light onto the photographic medium, capturing scenes that would otherwise be lost to time. With the world's oldest camera in your hands, you hold the very instrument that ignited the spark of a photographic revolution, paving the way for generations of photographers to come.</p>
+    
+   
+    <p>As you gaze upon this historic camera, you're transported to an era when the world was viewed through a different lens – one that forever changed the way we perceive reality. The delicate mechanisms and design details evoke a sense of wonder, inviting you to ponder the minds that conceived and crafted this marvel.</p>
+  
+   
+    <p>Owning the world's oldest camera isn't just about possessing a piece of antiquity; it's about preserving the legacy of a technology that has shaped modern culture. Whether you're an avid collector of vintage artifacts or a photography enthusiast, this camera allows you to connect with the evolution of an art form that has transcended time.</p>
+
+    <p>This is your chance to bid for a treasure that holds within its frame the origins of photography. As you place your bid, you're participating in a journey that celebrates human curiosity, innovation, and the quest to capture fleeting moments for eternity.</p>
+
+    <p>Don't let this unprecedented opportunity slip away. Bid now to become the custodian of the world's oldest camera and carry forward the legacy of those who dared to envision a world illuminated by the magic of photography. Let this historic relic be a beacon that inspires awe, curiosity, and an appreciation for the art that forever altered the way we see the world.</p>
+<div class="photo">
+		  <div class="container mt-2">
+    <form action="biding">
+      <button type="submit" class="btn btn-primary">Register for Bidding</button>
+    </form>
+  </div>
+  </div>
+  <script>
+    // Set the countdown time (in seconds)
+    const countdownTime = 120; // 2 minutes
+
+    function updateTimer() {
+      const timerElement = document.getElementById("timer");
+      const currentTime = new Date().getTime();
+      const endTime = currentTime + countdownTime * 1000;
+
+      const intervalId = setInterval(function () {
+        const now = new Date().getTime();
+        const timeLeft = endTime - now;
+
+        if (timeLeft <= 0) {
+          clearInterval(intervalId);
+          timerElement.innerHTML = "Bidding Start !";
+        } else {
+          const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+          timerElement.innerHTML = `Remaining Time: ${minutes}m ${seconds}s`;
+        }
+      }, 1000);
+    }
+
+    updateTimer();
+  </script>
+</body>
+
+</html>

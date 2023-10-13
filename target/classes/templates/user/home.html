@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+    <style>
+        body {
+            background-color: #f3e5f5;
+        }
+
+        .container-fluid {
+            background-color: cadetblue;
+        }
+        tr{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .table {
+            width: 100%;
+            border: 3px solid black;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+            border: 2px solid black;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+            border: 2px solid black;
+        }
+
+        .img-thumbnail {
+            max-width: 20%;
+            max-height: 20%;
+        }
+
+        .btn-success a {
+            color: #fff;
+            text-decoration: none;
+        }
+        h2 {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .btn.btn-success a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index">Live Auction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact">Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="feedback">Feedback</a>
+                    </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="winnerlist">Winner List</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <h2>Auction item List</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Owner Name</th>
+                    <th scope="col">Starting Price</th>
+                    <th scope="col">Product<br> Name</th>
+                    <th scope="col">Details of item</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td><img src="https://i.postimg.cc/xTwbPJBH/In-Shot-20200703-201644778.jpg" alt="Image 1"
+                            class="img-thumbnail"></td>
+                    <td>Garima Verma</td>
+                    <td>1000</td>
+                    <td>Doodle Art</td>
+                    <td><button class="btn btn-success"><a href="image1">Details</a></button></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td><img src="https://i.postimg.cc/RV5H7Jkt/In-Shot-20200827-225529093.jpg" alt="Image 2"
+                            class="img-thumbnail"></td>
+                    <td>Garima Verma</td>
+                    <td>2501</td>
+                    <td>Mandla Art</td>
+                    <td><button class="btn btn-success"><a href="image2">Details</a></button></td>
+                </tr>
+
+                <tr>
+                    <th scope="row">3</th>
+                    <td><img src="https://i.postimg.cc/h4xJtPXt/In-Shot-20200829-151639008.jpg" alt="Image 2"
+                            class="img-thumbnail"></td>
+                    <td>Garima Vermar</td>
+                    <td>1700</td>
+                    <td>Mandla Art</td>
+                    <td><button class="btn btn-success"><a href="image3">Details</a></button></td>
+                </tr>
+
+                <tr>
+                    <th scope="row">4</th>
+                    <td><img src="https://www.team-bhp.com/forum/attachments/vintage-cars-classics-india/879870d1692124244t-classic-cars-available-purchase-1327833816_308734142_5italianfiat1967modelrareandclassicwithacforsaleat189lacsvehicles.jpg"
+                            alt="Image 2" class="img-thumbnail"></td>
+                    <td>Dilip yadav</td>
+                    <td>10,000</td>
+                    <td>Italian Fiat</td>
+                    <td><button class="btn btn-success"><a href="image4">Details</a></button></td>
+                </tr>
+
+                <tr>
+                    <th scope="row">5</th>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfqXxYTXT6XH3v3ZkNC7a3ZAeG6QOjGncRmQ&usqp=CAU"
+                            alt="Image 2" class="img-thumbnail"></td>
+                    <td>Raj Jha</td>
+                    <td>5000</td>
+                    <td>Guitar</td>
+                    <td><button class="btn btn-success"><a href="image5">Details</a></button></td>
+                </tr>
+
+                <tr>
+                    <th scope="row">6</th>
+                    <td><img src="https://cdn.dotpe.in/longtail/store-items/6719118/xJEebUyh.jpeg"
+                            alt="Image 2" class="img-thumbnail"></td>
+                    <td>Mohnish Patil</td>
+                    <td>7,000</td>
+                    <td>Dhoni Jersey</td>
+                    <td><button class="btn btn-success"><a href="image6">Details</a></button></td>
+                </tr>
+
+
+                <tr>
+                    <th scope="row">7</th>
+                    <td><img src="https://i.pinimg.com/originals/a1/4a/04/a14a0433d085057106b61a5ef63c7249.jpg"
+                            alt="Image 2" class="img-thumbnail"></td>
+                    <td>Ajit Pawar</td>
+                    <td>7000</td>
+                    <td>monalisa painting </td>
+                    <td><button class="btn btn-success"><a href="image7">Details</a></button></td>
+                </tr>
+
+                <tr>
+                    <th scope="row">8</th>
+                    <td><img src="https://th.bing.com/th/id/R.468779221937b6735740e4e4d5adb8ec?rik=C0V79OwbxowHfA&riu=http%3a%2f%2fcoinindia.com%2fMWI3371-Sivaji-CNG73.1186-2.81g-7h.jpg&ehk=qVaqy1XcBo1pXdWkJiX1nLDDYLOgPXf1AxMpE5ySg1I%3d&risl=&pid=ImgRaw&r=0"
+                            alt="Image 2" class="img-thumbnail"></td>
+                    <td>Harshali Deshmukh</td>
+                    <td>25,000</td>
+                    <td>shivrai coins</td>
+                    <td><button class="btn btn-success"><a href="image8">Details</a></button></td>
+                </tr>
+
+                <tr>
+                    <th scope="row">9</th>
+                    <td><img src="https://luxurylaunches.com/wp-content/uploads/2012/12/daguerreotype2.jpg"
+                            alt="Image 2" class="img-thumbnail"></td>
+                    <td>Sharad Pawar</td>
+                    <td>10,0000</td>
+                    <td>World's Oldest Camera</td>
+                    <td><button class="btn btn-success"><a href="image9">Details</a></button></td>
+                </tr>
+
+                <tr>
+                    <th scope="row">10</th>
+                    <td><img src="https://i.postimg.cc/Df475Y40/Screenshot-20230824-160025-Instagram.jpg"
+                            alt="Image 2" class="img-thumbnail"></td>
+                    <td>Sanjay Raut</td>
+                    <td>50,000</td>
+                    <td>Chhatrapati Shivaji Maharaj Paintaing</td>
+                    <td><button class="btn btn-success"><a href="image10">Details</a></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
